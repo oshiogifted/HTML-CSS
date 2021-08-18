@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vh & Vw Units</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* no-repeat - makes sure the image doesn't repeat 
+    center center - centers the img on the x & y axis
+    cover - covers the whole page
+    */
+    header {
+      background: #333 url('https://source.unsplash.com/daily') no-repeat center center/cover; 
+      color: #fff;
+      height: 100vh; /* 100% does not work here bc when you inspect the body, you'll find that it only takes up the content and not the entire page. 50vh is exactly half of 100vh so it'll take up 50 of those 100vh slices.*/
+      /*width: 50vw; - horizontally across. Not used that much */
+      text-align: center;
+      padding: 2rem;
+      padding-top: 15rem;
+    }
+
+    header h1 {
+      font-size: 3rem; /* 16px * 3rem */
+    }
+
+    header p {
+      margin: 1rem 0; /* 1rem top/bottom 0 left/right - pushes link down */
+    }
+
+    .btn {
+      display: inline-block; /* by default, links are inline */
+      text-decoration: none;
+      background: #f4f4f4;
+      color: #333;
+      padding: 0.75rem 2rem;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    @media(max-height: 450px) {
+      header {
+        padding-top: 5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome To Our Website</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia sunt placeat fuga error ad quidem.</p>
+    <a href="#" class="btn">Find Out More</a>
+  </header>
+  <section>
+    <h3>About Our Company</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi, illum laboriosam, labore dolor explicabo soluta omnis rerum eaque debitis nemo modi id ratione delectus rem laudantium beatae corrupti repellendus quisquam minima placeat recusandae. Atque consequatur, totam minima perferendis eligendi doloremque laudantium quod nemo maiores hic, aut suscipit sequi a.</p>
+  </section>
+</body>
+</html>

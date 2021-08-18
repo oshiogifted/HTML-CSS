@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em & Rem Units</title>
+  <!--*#box-1 p -> another reason ppl don't use ems. The nested uls get bigger than the parent because they're going off their direct parent*/
+  /*  #box-1 ul -> this is 30px (not 20px) in 'computed' tab - takes the paragraph as the parent element. This is one reason ppl don't use ems  */ -->
+  <style>
+    /* #box-1 {
+      font-size: 20px;
+    }
+
+    #box-1 p {
+      font-size: 1.5em;
+      padding: 1em; 
+    }
+
+    #box-1 ul {
+      font-size: 1.2em; 
+    } */
+
+    html {
+      /*font-size: 10px;*/ /* changing the root html default font size from 16px to 10px. This is a common thing ppl do - they change it from 16 to 10 because its easier to calculate -- 1.6rem = 16 = EZ math */
+      font-size: 62.5%; /* this makes it more responsive */
+    }
+
+    #box-2 h3 {
+      font-size: 2rem; /* this is 32px - 16px (default html font-size) * 2 rem = 32px*/
+    }
+
+    #box-2 p {
+      font-size: 1.6rem; /* this is 25.6px in computed */
+      line-height: 1.7rem; /* 27.2px - much less confusing */
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="box-1">
+    <h3>Box One</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur doloremque corporis ipsam consequatur aliquid soluta nulla eveniet deleniti veniam!
+    </p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </ul>
+      <li>4</li>
+    </ul>
+  </div> -->
+  <div id="box-2">
+    <h3>Box Two</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur doloremque corporis ipsam consequatur aliquid soluta nulla eveniet deleniti veniam!
+    </p>
+  </div>
+</body>
+</html>
